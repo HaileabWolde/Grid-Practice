@@ -9,15 +9,20 @@ html, body{
  .container{
     display: grid;
     background-color: lightblue;
+    resize: both;
+    overflow: auto;
     height: 100%;
-    grid-template: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%/ 20% 50% 30%;
-    grid-template-areas: "header header header"
+    grid-template: repeat(6, min(50%, 1fr))/ repeat(3, 1fr);
+    
+ grid-template-areas: "header header header"
                          "sidebar navbar navbar"
                          "sidebar article article"
                          "sidebar article article"
                          "sidebar article article"
-                         "footer footer footer"
+                         "footer footer footer";
+                         
  }
+ 
  .container>div{
     border: 1px solid;
     text-align: center;
@@ -36,4 +41,4 @@ html, body{
  }
  .article{
     grid-area: article;
- }
+ } 
