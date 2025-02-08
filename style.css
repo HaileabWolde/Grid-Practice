@@ -6,3 +6,37 @@ html, body{
      margin: 0;
      padding: 0;
  }
+ .container{
+    display: grid;
+    background-color: lightblue;
+    height: 100%;
+    grid-template: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%/ 20% 50% 30%;
+ }
+ .container>div{
+    border: 1px solid;
+    text-align: center;
+ }
+ .header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+ }
+ .sidebar{
+    grid-row-start: 2;
+    grid-row-end: 6;
+ }
+ .footer{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 4;
+ }
+ .nav{
+    grid-column-start: 2;
+    grid-column-end: 4;
+ }
+ .article{
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 4;
+ }
